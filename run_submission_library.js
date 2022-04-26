@@ -43,7 +43,7 @@ if (!fs.existsSync("./libs/${user}")) {
 var path = "./libs/" + "${user}" + "/" + "${title}.md";
 fs.stat(path, function(err, stat) {
 	if(err == null) {
-		console.log('File exists');
+		console.log('File exists' + path);
 	} else if(err.code === 'ENOENT') {
 		// file does not exist
 		fs.writeFileSync("./libs/${user}/${title}.md", content);
