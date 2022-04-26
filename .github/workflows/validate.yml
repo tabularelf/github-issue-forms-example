@@ -20,9 +20,9 @@ jobs:
 
       - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > submitlibrary.json
 
-      - run: cat order.json
+      - run: cat submitlibrary.json
 
-      - run: node ./run-submission-library.js
+      - run: node ./run_submission_library.js
 
       - name: Commit changes
         shell: bash
