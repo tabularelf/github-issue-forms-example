@@ -48,3 +48,5 @@ if (fs.existsSync("libs")) {
 		}
 	});
 }
+
+fs.unlinkSync("submitlibrary.json")
