@@ -9,7 +9,7 @@ var content = `---
 title: ${title}
 description: ${description}
 link: ${link}
-version: ${verison}`;
+version: ${version}`;
 
 content += "\ntags:\n";
 
