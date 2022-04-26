@@ -33,7 +33,7 @@ content += "${post}";
 
 
 
-if !(fs.existsSync("./libs/${user}/${title}.md")) {
+if (!fs.existsSync("./libs/${user}/${title}.md")) {
   fs.writeFileSync("./libs/${user}/${title}.md", content);
 }
 
