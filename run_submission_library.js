@@ -32,14 +32,19 @@ content += "---\n";
 content += "${post}";
 
 
-fs.stat("./libs/${user}/${title}.md", function(err, stat) {
-    if(err == null) {
-        console.log('File exists');
-    } else if(err.code === 'ENOENT') {
-        // file does not exist
-        fs.writeFileSync("./libs/${user}/${title}.md", content);
-    } else {
-        console.log('Some other error: ', err.code);
-    }
-});
-
+if (fs.existSync("./libs")) {
+	if (!fs.existSync("./libs/${user}")) {
+		fs.mkdirSync("./libs/${user}");
+	}
+	
+	fs.stat("./libs/${user}/${title}.md", function(err, stat) {
+		if(err == null) {
+			console.log('File exists');
+		} else if(err.code === 'ENOENT') {
+			// file does not exist
+			fs.writeFileSync("./libs/${user}/${title}.md", content);
+		} else {
+			console.log('Some other error: ', err.code);
+		}
+	});
+}
