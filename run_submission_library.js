@@ -5,11 +5,11 @@ const library = require('./submitlibrary.json');
 const user = eventPayload.sender.login;
 const [title, description, authors, link, version, tags, post] = Object.values(library);
 
-var content = @"---
+var content = `---
 title: ${title}
 description: ${description}
 link: ${link}
-version: ${verison}";
+version: ${verison}`;
 
 content += "\ntags:\n";
 
