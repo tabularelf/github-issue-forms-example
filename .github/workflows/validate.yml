@@ -18,7 +18,7 @@ jobs:
         with:
           template-path: .github/ISSUE_TEMPLATE/submit-library.yml
 
-      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > submission-library.json
+      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > submitlibrary.json
 
       - run: cat order.json
 

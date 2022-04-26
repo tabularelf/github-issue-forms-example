@@ -1,6 +1,6 @@
 const fs = require('fs');
 const eventPayload = require(process.env.GITHUB_EVENT_PATH);
-const library = require('./submission-library.json');
+const library = require('./submitlibrary.json');
 
 const user = eventPayload.sender.login;
 const [title, description, authors.split(","), link, version, tags.split(","), post] = Object.values(library);
@@ -29,8 +29,8 @@ content += "${post}";
 
 
 
-if !(fs.existsSync("//libs//${user}//${title}.md")) {
-  fs.writeFileSync("//libs//${user}//${title}.md", content);
+if !(fs.existsSync("./libs/${user}/${title}.md")) {
+  fs.writeFileSync("./libs/${user}/${title}.md", content);
 }
 
 
