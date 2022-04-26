@@ -37,7 +37,7 @@ if (!fs.existsSync("./libs")) {
 }
 
 if (!fs.existsSync("./libs/" + user)) {
-	fs.mkdirSync("./libs/" + "user);
+	fs.mkdirSync("./libs/" + user);
 }
 
 var path = "./libs/" + user + "/" + title + ".md";
