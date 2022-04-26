@@ -33,6 +33,14 @@ body:
   validations:
     required: true
 - type: input
+  id: version
+  attributes:
+    label: Version
+    value: v0.0.0
+    description: Initial version of your submission.
+  validations:
+    required: true
+- type: input
   id: tags
   attributes:
     label: Tags 
@@ -44,13 +52,5 @@ body:
   attributes:
     label: Post 
     description: Please provide an extensive description and or provide images here
-  validations:
-    required: true
-- type: input
-  id: version
-  attributes:
-    label: Version
-    value: v0.0.0
-    description: Initial version of your submission.
   validations:
     required: true
