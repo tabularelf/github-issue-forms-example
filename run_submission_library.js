@@ -32,8 +32,8 @@ content += "---\n";
 content += "${post}";
 
 
-if (fs.existSync("./libs")) {
-	if (!fs.existSync("./libs/${user}")) {
+if (fs.existsSync("./libs")) {
+	if (!fs.existsSync("./libs/${user}")) {
 		fs.mkdirSync("./libs/${user}");
 	}
 	
