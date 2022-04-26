@@ -3,7 +3,7 @@ const eventPayload = require(process.env.GITHUB_EVENT_PATH);
 const library = require('./submitlibrary.json');
 
 const user = eventPayload.sender.login;
-const [title, description, authors.split(","), link, version, tags.split(","), post] = Object.values(library);
+const [title, description, authors, link, version, tags, post] = Object.values(library);
 
 var content = @"---
 title: ${title}
@@ -13,14 +13,18 @@ version: ${verison}";
 
 content += "\ntags:\n";
 
-for (var entry in ${tags}) {
-	content += "  - ${tags[entry]}\n";
+var _tags = ${tags}.split(",");
+
+for (var entry in _tags) {
+	content += "  - " + entry +"\n";
 }
 
 content += "\authors:\n";
 
-for (var entry in ${authors}) {
-	content += "  - ${authors[entry]}\n";
+var _authors = ${authors}.split(",");
+
+for (var entry in _authors) {
+	content += "  - " + entry + "\n";
 }
 
 content += "---\n";
