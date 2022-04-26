@@ -36,17 +36,17 @@ if (!fs.existsSync("./libs")) {
 	fs.mkdirSync("./libs");
 }
 
-if (!fs.existsSync("./libs/${user}")) {
-	fs.mkdirSync("./libs/${user}");
+if (!fs.existsSync("./libs/" + user)) {
+	fs.mkdirSync("./libs/" + "user);
 }
 
-var path = "./libs/" + "${user}" + "/" + "${title}.md";
+var path = "./libs/" + user + "/" + title + ".md";
 fs.stat(path, function(err, stat) {
 	if(err == null) {
-		console.log('File exists' + path);
+		console.log('File exists ' + path);
 	} else if(err.code === 'ENOENT') {
 		// file does not exist
-		fs.writeFileSync("./libs/${user}/${title}.md", content);
+		fs.writeFileSync(path, content);
 	} else {
 		console.log('Some other error: ', err.code);
 	}
