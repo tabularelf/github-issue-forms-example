@@ -18,11 +18,11 @@ jobs:
         with:
           template-path: .github/ISSUE_TEMPLATE/submit-library.yml
 
-      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > order.json
+      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > submission-library.json
 
       - run: cat order.json
 
-      - run: node ./place-order.js
+      - run: node ./run-submission-library.js
 
       - name: Commit changes
         shell: bash
