@@ -16,7 +16,7 @@ content += "\ntags:\n";
 var _tags = "${tags}".split(",");
 
 for (var entry in _tags) {
-	content += "  - " + entry +"\n";
+	content += "  - " + _tags[entry] +"\n";
 }
 
 content += "\authors:\n";
@@ -24,7 +24,7 @@ content += "\authors:\n";
 var _authors = "${authors}".split(",");
 
 for (var entry in _authors) {
-	content += "  - " + entry + "\n";
+	content += "  - " + _authors[entry] + "\n";
 }
 
 content += "---\n";
