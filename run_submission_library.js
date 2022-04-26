@@ -13,7 +13,7 @@ version: ${version}`;
 
 content += "\ntags:\n";
 
-var _tags = "${tags}".split(",");
+var _tags = tags.split(",");
 
 for (var entry in _tags) {
 	content += "  - " + _tags[entry] +"\n";
@@ -21,7 +21,7 @@ for (var entry in _tags) {
 
 content += "\authors:\n";
 
-var _authors = "${authors}".split(",");
+var _authors = authors.split(",");
 
 for (var entry in _authors) {
 	content += "  - " + _authors[entry] + "\n";
@@ -29,7 +29,7 @@ for (var entry in _authors) {
 
 content += "---\n\n";
 
-content += "${post}";
+content += post;
 
 
 if (!fs.existsSync("./libs")) {
