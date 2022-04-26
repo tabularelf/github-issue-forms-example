@@ -27,7 +27,7 @@ for (var entry in _authors) {
 	content += "  - " + _authors[entry] + "\n";
 }
 
-content += "---\n";
+content += "---\n\n";
 
 content += "${post}";
 
